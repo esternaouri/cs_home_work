@@ -1,0 +1,127 @@
+//==============================Q1===================================
+static int[] q1(int [] arr , int n){
+    int [] res=new int[arr.Length+1];
+for(int i=0; i<arr.Length; i++){
+    res[i]=arr[i];
+    Console.Write(res[i]+" ");
+}
+res[arr.Length]=n;
+Console.Write(res[arr.Length]);
+return res;
+
+}
+//=================================Q2===================================
+static void q2(int [] arr , int n){
+    bool r=false;
+for(int i=0; i<arr.Length; i++){
+    if( arr[i]==n){
+    Console.Write(i+", ");
+    r=true;
+}
+}
+if (r!=true){
+Console.Write("null");
+}
+}
+//============================================Q3================================
+static void q3(int [] arr , int n){
+    bool r=false;
+    int max=n;
+for(int i=0; i<arr.Length; i++){
+    if( (arr[i]>n)&&(arr[i]>max)){
+    Console.Write(arr[i]+", ");
+         max=arr[i];
+
+    r=true;
+}
+}
+if (r!=true){
+Console.Write("null");
+}
+}
+//================================Q4=======================================
+static void q4(int [] arr , int n){
+    int r=0;
+for(int i=0; i<arr.Length; i++){
+    if( arr[i]!=n){
+  // Console.Write(arr[i]+", ");
+   r=r+1;
+}
+}
+if (r==arr.Length){
+Console.WriteLine("null");
+}
+else{
+for(int j=0; j<arr.Length; j++){
+    if( arr[j]!=n){
+   Console.Write(arr[j]+", ");
+}
+}
+}
+}
+//============================================Q5======================================
+
+static void q5(int[] arr,int n) {
+    for(int i=0; i<arr.Length; i++){
+ if( includesInteger(arr[i],n)==true){
+    Console.Write(arr[i]+" ");
+ }
+
+        }
+            
+      }
+static bool includesInteger(int number, int digit)
+{
+  while(number > 0)
+  {
+      if (number % 10 == digit) return true;
+      number /= 10;
+  }
+ return false; 
+}
+
+
+
+   }
+   
+   //==============================================Q6=====================================
+   
+      static void q6(int[] arr) {
+         int temp;
+         for (int j = 0; j <= arr.Length - 2; j++) {
+            for (int i = 0; i <= arr.Length - 2; i++) {
+              if (arr[i] <arr[i + 1]) {
+                  temp= arr[i + 1];
+                 arr[i + 1] = arr[i];
+                 arr[i] = temp;
+              }
+           }
+        }
+        Console.WriteLine("Sorted:");
+        foreach (int p in arr)
+           Console.Write(p + " ");
+     }
+     
+     
+     //===================================================Q7===============================
+         static  void q7(int[] arr)
+        {
+            bool res=true;
+        for(int i=0; i<arr.Length; i++){
+            int x= arr[i];
+            if (x!=arr[i+1])
+            {
+                 res=false;
+                Console.WriteLine("not the same");
+            }
+                break;
+                x=arr[i+10];
+        }   
+        if (res==true)
+               Console.WriteLine("same");
+        
+        }
+   
+     
+     
+     
